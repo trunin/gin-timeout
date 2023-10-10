@@ -1,10 +1,10 @@
 # gin-timeout
-[![golang-ci](https://github.com/vearne/gin-timeout/actions/workflows/golang-ci.yml/badge.svg)](https://github.com/vearne/gin-timeout/actions/workflows/golang-ci.yml)
+[![golang-ci](https://github.com/trunin/gin-timeout/actions/workflows/golang-ci.yml/badge.svg)](https://github.com/trunin/gin-timeout/actions/workflows/golang-ci.yml)
 
 Timeout Middleware for Gin framework
 
 
-* [中文 README](https://github.com/vearne/gin-timeout/blob/master/README_zh.md)
+* [中文 README](https://github.com/trunin/gin-timeout/blob/master/README_zh.md)
 
 ### Thanks
 Inspired by golang source code [http.TimeoutHandler](https://github.com/golang/go/blob/5f3dabbb79fb3dc8eea9a5050557e9241793dce3/src/net/http/server.go#L3255)
@@ -13,7 +13,7 @@ Inspired by golang source code [http.TimeoutHandler](https://github.com/golang/g
 Download and install using go module:
 ```
 export GO111MODULE=on
-go get github.com/vearne/gin-timeout
+go get github.com/trunin/gin-timeout
 ```
 
 ### Notice:
@@ -29,7 +29,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	timeout "github.com/vearne/gin-timeout"
+	timeout "github.com/trunin/gin-timeout"
 )
 
 func main() {
@@ -54,7 +54,7 @@ func main() {
 ```
 
 ### Example
-[more example](https://github.com/vearne/gin-timeout/tree/master/example)
+[more example](https://github.com/trunin/gin-timeout/tree/master/example)
 ```go
 package main
 
@@ -62,7 +62,7 @@ import (
 	"context"
 	"fmt"
 	"github.com/gin-gonic/gin"
-	"github.com/vearne/gin-timeout"
+	"github.com/trunin/gin-timeout"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -124,7 +124,7 @@ func long2(c *gin.Context) {
 
 func long3(c *gin.Context) {
 	// request a slow service
-	// see  https://github.com/vearne/gin-timeout/blob/master/example/slow_service.go
+	// see  https://github.com/trunin/gin-timeout/blob/master/example/slow_service.go
 	url := "http://localhost:8882/hello"
 	// Notice:
 	// Please use c.Request.Context(), the handler will be canceled where timeout event happen.

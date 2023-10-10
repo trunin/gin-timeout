@@ -10,7 +10,7 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	timeout "github.com/vearne/gin-timeout"
+	timeout "github.com/trunin/gin-timeout"
 )
 
 // test case1:
