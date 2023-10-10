@@ -56,7 +56,7 @@ func Timeout(opts ...Option) gin.HandlerFunc {
 		// Channel capacity must be greater than 0.
 		// Otherwise, if the parent coroutine quit due to timeout,
 		// the child coroutine may never be able to quit.
-		finish := make(chan struct{}, 1)
+		finish := make(chan struct{})
 		panicChan := make(chan interface{}, 1)
 		go func() {
 			defer func() {
